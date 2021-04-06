@@ -35,16 +35,71 @@ html, body {
   text-align: center;
 }
 .section-un__titre {
-  margin: 0 0 20px 0;
+  margin: 0 10px 20px 10px;
+}
+.section-un__paragraphe {
+  color: #353535;
+  margin-bottom: 30px;
 }
 .section-un__bouton {
-  color: white;
   width: 218px;
   height: 50px;
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #ff79da 100%);
   border-radius: 25px;
   border: none;
-  background: #9356dc;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  color: white;
+  font-size: 1em;
+  box-shadow: 0 1px 8px grey;
+  margin-bottom: 57px;
+}
+.section-un__bouton:hover {
+  background: #ff79da;
+  box-shadow: 0 4px 8px grey;
+  cursor: pointer;
+}
+.section-un__bouton:focus {
+  outline: none;
+}
+
+.section-deux {
+  padding-left: 20px;
+  max-width: 375px;
+  margin: auto;
+}
+.section-deux__carte {
+  display: flex;
+}
+.section-deux__carte__element {
+  display: flex;
+  width: 322px;
+  height: 75px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px grey;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+.section-deux__carte__element__numero {
+  margin-left: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-deux__carte__element > i {
+  margin-left: 33px;
+  margin-right: 27px;
+}
+.section-deux__carte__element:hover {
+  background-color: #f5edff;
+}
+.section-deux__carte__element:hover > i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

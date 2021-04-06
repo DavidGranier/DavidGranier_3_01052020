@@ -30,24 +30,86 @@ html, body {
     }
 }
 
+$color1 :#9356DC;
+$color2 :#ff79da;
+$color3 :#99E2D0;
+
+@mixin bouton{
+    background: $color1;
+    background: linear-gradient(0deg,$color1 0%, $color2 100%);
+    border-radius: 25px;
+    border:none;
+    color: white;
+    font-size: 1em;
+    box-shadow: 0 1px 8px grey;
+    &:hover{
+        background: $color2;
+        box-shadow: 0 4px 8px grey;
+        cursor:pointer;
+    }
+    &:focus{
+        outline:none ;
+      }
+}
+
+
 .section-un{
     background-color: #f6f6f6;
     padding: 43px 40px 57px 40px;
     text-align: center;
     &__titre{
-        margin: 0 0 20px 0;
+        margin: 0 10px 20px 10px;
+    }
+    &__paragraphe{
+        color: #353535;
+        margin-bottom: 30px;
     }
     &__bouton{
-        color: white;
         width: 218px;
         height: 50px;
-        border-radius: 25px;
-        border: none;
-        background: rgb(147,86,220);
-        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        @include bouton;
+        margin-bottom: 57px;
     }
 }
 
-
-
-
+.section-deux{
+    padding-left: 20px;
+    max-width: 375px;
+    margin: auto;
+    
+    &__carte{
+        display: flex;
+        &__element{
+            display: flex;
+            width: 322px;
+            height: 75px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px grey;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-left: -10px;
+            &__numero{
+                margin-left: -10px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50px;
+                background-color:$color1;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+            &>i {
+                margin-left: 33px;
+                margin-right: 27px;
+            }
+            &:hover{
+            background-color: #f5edff;
+                &>i{
+                    color:$color1;
+                }
+            }
+        }
+    }
+    
+}
