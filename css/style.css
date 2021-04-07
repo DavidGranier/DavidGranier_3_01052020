@@ -1,11 +1,15 @@
+@charset "UTF-8";
+/*Identitée graphique*/
 * {
   font-family: "roboto", arial;
 }
 
+/*Marges*/
 html, body {
   margin: 0;
 }
 
+/*Header*/
 .header {
   width: 100%;
   height: 63px;
@@ -18,33 +22,148 @@ html, body {
   height: 29px;
 }
 
+/*Localiser*/
 .localiser {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #eaeaea;
-  box-shadow: inset 0 1px 3px grey;
+  box-shadow: inset 0px 1px 10px grey;
 }
 .localiser__icone {
   margin-right: 15px;
 }
 
+/*Section 1 : Acceuil*/
 .section-un {
   background-color: #f6f6f6;
-  padding: 43px 40px 57px 40px;
+  padding-top: 43px;
   text-align: center;
 }
 .section-un__titre {
-  margin: 0 0 20px 0;
+  margin: 0 50px 20px 50px;
+}
+.section-un__paragraphe {
+  color: #353535;
+  margin: 0 40px 30px 40px;
 }
 .section-un__bouton {
-  color: white;
   width: 218px;
   height: 50px;
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #ff79da 100%);
   border-radius: 25px;
   border: none;
-  background: #9356dc;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  color: white;
+  font-size: 1em;
+  box-shadow: 0 1px 8px grey;
+  margin-bottom: 57px;
 }
+.section-un__bouton:hover {
+  background: #ff79da;
+  box-shadow: 0 4px 8px grey;
+  cursor: pointer;
+}
+.section-un__bouton:focus {
+  outline: none;
+}
+
+/*Section 2 : Fonctionnement*/
+.section-deux {
+  padding: 50px 0 70px 40px;
+  margin: auto;
+  max-width: 375px;
+}
+.section-deux__titre {
+  margin: 0 0 35px 0;
+}
+.section-deux__carte {
+  display: flex;
+  max-width: 322px;
+  height: 75px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px grey;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+.section-deux__carte__numero {
+  margin-left: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-deux__carte > i {
+  margin-left: 20px;
+  margin-right: 27px;
+}
+.section-deux__carte:hover {
+  background-color: #f5edff;
+}
+.section-deux__carte:hover > i {
+  color: #9356DC;
+}
+
+/*Section 3 : Resaurants*/
+.section-trois {
+  margin: auto;
+  background-color: #f6f6f6;
+}
+.section-trois__titre {
+  margin: 0;
+}
+.section-trois__carte {
+  display: flex;
+  max-width: 335px;
+  height: 250px;
+  box-shadow: 0 4px 8px grey;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.section-trois__carte > a {
+  text-decoration: none;
+  color: black;
+}
+.section-trois__carte__img {
+  width: 335px;
+  height: 174px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.section-trois__carte__texte {
+  width: 300px;
+  margin: 10px 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /*A REMPLACER PAR TRANSITION*/
+}
+.section-trois__carte__texte > p {
+  margin: 5px 0 5px 0;
+  width: 250px;
+  text-decoration: none;
+}
+.section-trois__carte__texte__nom {
+  font-weight: 700;
+}
+.section-trois__carte__texte > .plein {
+  display: none;
+}
+.section-trois__carte__texte > .vide {
+  margin-top: 10px;
+}
+.section-trois__carte__texte > .vide:hover {
+  display: none;
+}
+.section-trois__carte__texte > .vide:hover + .plein {
+  display: flex;
+  margin-top: 10px;
+  color: #9356DC;
+}
+
 
 /*# sourceMappingURL=style.css.map */
