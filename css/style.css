@@ -70,12 +70,12 @@ html, body {
 
 /*Section 2 : Fonctionnement*/
 .section-deux {
-  padding: 50px 0 70px 40px;
+  padding: 50px 0 70px 45px;
   margin: auto;
   max-width: 375px;
 }
 .section-deux__titre {
-  margin: 0 0 35px 0;
+  margin: 0 0 35px -15px;
 }
 .section-deux__carte {
   display: flex;
@@ -111,11 +111,16 @@ html, body {
 
 /*Section 3 : Resaurants*/
 .section-trois {
-  margin: auto;
   background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 65px;
+}
+.section-trois > div {
+  max-width: 375px;
 }
 .section-trois__titre {
-  margin: 0;
+  margin: 60px 0 30px 0;
 }
 .section-trois__carte {
   display: flex;
@@ -165,5 +170,31 @@ html, body {
   color: #9356DC;
 }
 
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 40px 25px;
+}
+.footer > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__logo {
+  width: 100px;
+  margin-right: 100%;
+  height: 20px;
+  margin: 25px 0 25px 0;
+}
+.footer__lien {
+  text-decoration: none;
+  color: white;
+  margin: 5px 0 5px 0px;
+  width: 300px;
+}
+.footer__lien > i {
+  margin-right: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
