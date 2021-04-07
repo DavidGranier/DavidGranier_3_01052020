@@ -70,9 +70,12 @@ html, body {
 
 /*Section 2 : Fonctionnement*/
 .section-deux {
-  padding-left: 40px;
+  padding: 50px 0 70px 40px;
   margin: auto;
   max-width: 375px;
+}
+.section-deux__titre {
+  margin: 0 0 35px 0;
 }
 .section-deux__carte {
   display: flex;
@@ -105,5 +108,62 @@ html, body {
 .section-deux__carte:hover > i {
   color: #9356DC;
 }
+
+/*Section 3 : Resaurants*/
+.section-trois {
+  margin: auto;
+  background-color: #f6f6f6;
+}
+.section-trois__titre {
+  margin: 0;
+}
+.section-trois__carte {
+  display: flex;
+  max-width: 335px;
+  height: 250px;
+  box-shadow: 0 4px 8px grey;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.section-trois__carte > a {
+  text-decoration: none;
+  color: black;
+}
+.section-trois__carte__img {
+  width: 335px;
+  height: 174px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.section-trois__carte__texte {
+  width: 300px;
+  margin: 10px 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /*A REMPLACER PAR TRANSITION*/
+}
+.section-trois__carte__texte > p {
+  margin: 5px 0 5px 0;
+  width: 250px;
+  text-decoration: none;
+}
+.section-trois__carte__texte__nom {
+  font-weight: 700;
+}
+.section-trois__carte__texte > .plein {
+  display: none;
+}
+.section-trois__carte__texte > .vide {
+  margin-top: 10px;
+}
+.section-trois__carte__texte > .vide:hover {
+  display: none;
+}
+.section-trois__carte__texte > .vide:hover + .plein {
+  display: flex;
+  margin-top: 10px;
+  color: #9356DC;
+}
+
 
 /*# sourceMappingURL=style.css.map */

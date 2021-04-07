@@ -75,9 +75,12 @@ html, body {
 
 /*Section 2 : Fonctionnement*/
 .section-deux{
-    padding-left: 40px;
+    padding: 50px 0 70px 40px;
     margin: auto;
     max-width: 375px;
+    &__titre{
+        margin:0 0 35px 0;
+    }
     &__carte{
         display: flex;
         max-width: 322px;
@@ -111,4 +114,62 @@ html, body {
         
     }
     
+}
+
+/*Section 3 : Resaurants*/
+
+.section-trois{
+    margin: auto;
+    background-color: #f6f6f6;
+    &__titre{
+        margin:0;
+    }
+    &__carte{
+        display: flex;
+        max-width: 335px;
+        height: 250px;
+        box-shadow:0 4px 8px grey;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        &>a{
+            text-decoration: none;
+            color: black;
+        }
+        &__img{
+            width: 335px;
+            height: 174px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+        }
+        &__texte{
+            width: 300px;
+            margin: 10px 0 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            &>p{
+                margin: 5px 0 5px 0;
+                width: 250px;
+                text-decoration: none;
+            }
+            &__nom{
+                font-weight: 700;
+            }
+            &>.plein{display: none;}     /*A REMPLACER PAR TRANSITION*/
+            &>.vide{
+                margin-top: 10px;
+                &:hover{
+                    display: none;
+                    &+.plein{
+                        display:flex;
+                        margin-top: 10px;
+                        color:$color1;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
 }
