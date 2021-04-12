@@ -1,12 +1,12 @@
 @charset "UTF-8";
-/*Identitée graphique*/
-* {
-  font-family: "roboto", arial;
-}
-
 /*Marges*/
 html, body {
   margin: 0;
+}
+
+/*Identitée graphique*/
+* {
+  font-family: "roboto", arial;
 }
 
 /*Header*/
@@ -16,7 +16,6 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*header retour*/
 }
 .header__logo {
   width: 164px;
@@ -26,6 +25,34 @@ html, body {
   color: #353535;
   position: absolute;
   left: 20px;
+}
+
+/*Footer*/
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 40px 25px;
+}
+.footer > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__logo {
+  width: 100px;
+  margin-right: 100%;
+  height: 20px;
+  margin: 25px 0 25px 0;
+}
+.footer__lien {
+  text-decoration: none;
+  color: white;
+  margin: 5px 0 5px 0px;
+  width: 300px;
+}
+.footer__lien > i {
+  margin-right: 10px;
 }
 
 /*Localiser*/
@@ -198,39 +225,12 @@ html, body {
   right: 20px;
 }
 
-.footer {
-  background-color: #353535;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 0 40px 25px;
-}
-.footer > div {
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer__logo {
-  width: 100px;
-  margin-right: 100%;
-  height: 20px;
-  margin: 25px 0 25px 0;
-}
-.footer__lien {
-  text-decoration: none;
-  color: white;
-  margin: 5px 0 5px 0px;
-  width: 300px;
-}
-.footer__lien > i {
-  margin-right: 10px;
-}
-
-.section-menu > img {
+.section-menu__img {
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
-.section-menu > div {
+.section-menu__contenu {
   position: relative;
   width: 100%;
   height: 2000px;
