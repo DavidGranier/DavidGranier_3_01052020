@@ -139,6 +139,7 @@ html, body {
 .section-trois__carte > a {
   text-decoration: none;
   color: black;
+  position: relative;
 }
 .section-trois__carte:hover {
   transform: scale(1.01);
@@ -148,6 +149,22 @@ html, body {
   height: 174px;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
+}
+.section-trois__carte__nouveau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  width: 80px;
+  height: 30px;
+  margin: 0;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #99E2D0;
+  color: #008766;
+  /*Ajouter un DARKEN*/
 }
 .section-trois__carte__texte {
   position: relative;
@@ -208,10 +225,18 @@ html, body {
   margin-right: 10px;
 }
 
-.section-image>img {
+.section-menu > img {
   width: 100%;
   height: 260px;
   object-fit: cover;
+}
+.section-menu > div {
+  position: relative;
+  width: 100%;
+  height: 2000px;
+  border-radius: 25px 25px 0 0;
+  margin-top: -50px;
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */

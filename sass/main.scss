@@ -145,6 +145,7 @@ html, body {
         &>a{
             text-decoration: none;
             color: black;
+            position: relative;
         }
         &:hover{
             transform: scale(1.01);
@@ -154,6 +155,21 @@ html, body {
             height: 174px;
             object-fit: cover;
             border-radius: 25px 25px 0 0;
+        }
+        &__nouveau{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 13px;
+            right: 11px;
+            width: 80px;
+            height: 30px;
+            margin: 0;
+            border-radius: 5px;
+            font-weight: 700;
+            background-color: $color3;
+            color: #008766; /*Ajouter un DARKEN*/
         }
         &__texte{
             position: relative;
@@ -219,7 +235,19 @@ html, body {
 
 }
 
-.section-image1{
+.section-menu{
+    &>img{
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        
+    }
+    &>div{
+    position: relative;
     width: 100%;
-    object-fit: cover;
+    height: 2000px;
+    border-radius: 25px 25px 0 0;
+    margin-top: -50px;
+    background-color: #f6f6f6;
+    }
 }
