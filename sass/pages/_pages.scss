@@ -1,0 +1,176 @@
+/*Localiser*/
+.localiser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    box-shadow: inset 0px 1px 10px grey;
+    &__icone{
+        margin-right: 15px;
+    }
+}
+
+/*Section 1 : Acceuil*/
+.section-un{
+    background-color: #f6f6f6;
+    padding-top: 43px;
+    text-align: center;
+    &__titre{
+        margin: 0 50px 20px 50px;
+    }
+    &__paragraphe{
+        color: #353535;
+        margin:0 40px 30px 40px;
+    }
+    &__bouton{
+        width: 218px;
+        height: 50px;
+        @include bouton;
+        margin-bottom: 57px;
+    }
+}
+
+/*Section 2 : Fonctionnement*/
+.section-deux{
+    padding: 50px 0 70px 45px;
+    margin: auto;
+    max-width: 375px;
+    &__titre{
+        margin:0 0 35px -15px;
+    }
+    &__carte{
+        display: flex;
+        max-width: 322px;
+        height: 75px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px grey;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        &__numero{
+            margin-left: -10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            background-color:$color1;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &>i {
+            margin-left: 20px;
+            margin-right: 27px;
+            }
+        &:hover{
+        background-color: #f5edff;
+            &>i{
+                color:$color1;
+            }
+        }
+        
+    }
+    
+}
+
+/*Section 3 : Resaurants*/
+
+.section-trois{
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 65px;
+    &>div{
+        max-width: 375px;
+    }
+    &__titre{
+        margin:60px 0 30px 0;
+    }
+    &__carte{
+        display: flex;
+        max-width: 335px;
+        height: 250px;
+        box-shadow:0 4px 8px grey;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        &>a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+        &:hover{
+            transform: scale(1.01);
+        }
+        &__img{
+            width: 335px;
+            height: 174px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+        }
+        &__nouveau{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 13px;
+            right: 11px;
+            width: 80px;
+            height: 30px;
+            margin: 0;
+            border-radius: 5px;
+            font-weight: 700;
+            background-color: $color3;
+            color: #008766; /*Ajouter un DARKEN*/
+        }
+        &__texte{
+            position: relative;
+            width: 300px;
+            margin: 10px 0 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            &>p{
+                margin: 5px 0 5px 0;
+                width: 250px;
+                text-decoration: none;
+            }
+            &__nom{
+                font-weight: 700;
+            }
+            &>.plein{
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                opacity: 0;
+                transition: opacity 500ms;
+                color: $color1;
+                &:hover{
+                    opacity: 1;
+
+                }
+            }
+            &>.vide{
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                
+            }
+        }
+    }
+}
+
+.section-menu{
+    &__img{
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        
+    }
+    &__contenu{
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    border-radius: 25px 25px 0 0;
+    margin-top: -50px;
+    background-color: #f6f6f6;
+    }
+}
