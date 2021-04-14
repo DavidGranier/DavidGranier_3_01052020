@@ -57,9 +57,10 @@
     &__contenu{
     position: relative;
     max-width: 375px;
-    
     border-radius: 25px 25px 0 0;
     margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f6f6f6;
     
         &__titre{
@@ -85,4 +86,34 @@ h2{
     font-family: "Shrikhand";
     margin: 40px 30px 35px 20px;
 }
+
+.section-menu__contenu__entrees{
+    margin: 15px;
+    &>h3{
+        margin: 0;
+
+    }
+    &>.bordure{
+        height: 3px;
+        width: 40px;
+        background-color: $color3;
+    }
+    &>a{
+        text-decoration: none;
+        
+        color: black;
+        &:hover > div{
+            background-color: blue;/*ANNIMATION*/
+        }
+        &>div{
+            max-width: 350px;
+            height: 70px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow:0 4px 8px grey; ;
+        }
+    }
+}
+
+
 

@@ -121,6 +121,8 @@ html, body {
   max-width: 375px;
   border-radius: 25px 25px 0 0;
   margin-top: -50px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f6f6f6;
 }
 .section-menu__contenu__titre {
@@ -142,6 +144,33 @@ html, body {
 h2 {
   font-family: "Shrikhand";
   margin: 40px 30px 35px 20px;
+}
+
+.section-menu__contenu__entrees {
+  margin: 15px;
+}
+.section-menu__contenu__entrees > h3 {
+  margin: 0;
+}
+.section-menu__contenu__entrees > .bordure {
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+.section-menu__contenu__entrees > a {
+  text-decoration: none;
+  color: black;
+}
+.section-menu__contenu__entrees > a:hover > div {
+  background-color: blue;
+  /*ANNIMATION*/
+}
+.section-menu__contenu__entrees > a > div {
+  max-width: 350px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px grey;
 }
 
 /*Localiser*/
@@ -258,7 +287,7 @@ h2 {
   position: relative;
 }
 .section-trois__carte:hover {
-  transform: scale(1.01);
+  box-shadow: 0 0 10px 5px grey;
 }
 .section-trois__carte__img {
   width: 100%;
