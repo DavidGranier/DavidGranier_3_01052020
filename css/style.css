@@ -9,6 +9,61 @@ html, body {
   font-family: "roboto", arial;
 }
 
+/*Like*/
+.coeurplein {
+  opacity: 0;
+  transition: opacity 500ms;
+  color: #9356DC;
+}
+.coeurplein:hover {
+  opacity: 1;
+}
+
+/*Spinner*/
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    height: 0px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+  background-color: white;
+  cursor: wait;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-name: opacity;
+  animation-fill-mode: both;
+}
+
+.spinner {
+  color: #9356DC;
+  animation: spin 2s linear infinite;
+}
+
+.spinner__logo {
+  margin-bottom: 40px;
+}
+
 /*Header*/
 .header {
   width: 100%;
@@ -53,6 +108,40 @@ html, body {
 }
 .footer__lien > i {
   margin-right: 10px;
+}
+
+/*Image page menu*/
+.section-menu__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.section-menu__contenu {
+  position: relative;
+  max-width: 375px;
+  border-radius: 25px 25px 0 0;
+  margin-top: -50px;
+  background-color: #f6f6f6;
+}
+.section-menu__contenu__titre {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.section-menu__contenu__titre > .coeurvide {
+  position: absolute;
+  top: 50px;
+  left: 280px;
+}
+.section-menu__contenu__titre > .coeurplein {
+  position: absolute;
+  top: 50px;
+  left: 280px;
+}
+
+h2 {
+  font-family: "Shrikhand";
+  margin: 40px 30px 35px 20px;
 }
 
 /*Localiser*/
@@ -172,7 +261,7 @@ html, body {
   transform: scale(1.01);
 }
 .section-trois__carte__img {
-  width: 335px;
+  width: 100%;
   height: 174px;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
@@ -195,7 +284,7 @@ html, body {
 }
 .section-trois__carte__texte {
   position: relative;
-  width: 300px;
+  max-width: 300px;
   margin: 10px 0 0 20px;
   display: flex;
   flex-wrap: wrap;
@@ -208,35 +297,15 @@ html, body {
 .section-trois__carte__texte__nom {
   font-weight: 700;
 }
-.section-trois__carte__texte > .plein {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  opacity: 0;
-  transition: opacity 500ms;
-  color: #9356DC;
-}
-.section-trois__carte__texte > .plein:hover {
-  opacity: 1;
-}
-.section-trois__carte__texte > .vide {
+.section-trois__carte__texte > .coeurplein {
   position: absolute;
   top: 10px;
   right: 20px;
 }
-
-.section-menu__img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-.section-menu__contenu {
-  position: relative;
-  width: 100%;
-  height: 2000px;
-  border-radius: 25px 25px 0 0;
-  margin-top: -50px;
-  background-color: #f6f6f6;
+.section-trois__carte__texte > .coeurvide {
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
