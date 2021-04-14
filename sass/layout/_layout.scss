@@ -45,3 +45,44 @@
     }
 
 }
+/*Image page menu*/
+.section-menu{
+    
+    &__img{
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        
+    }
+    &__contenu{
+    position: relative;
+    max-width: 375px;
+    
+    border-radius: 25px 25px 0 0;
+    margin-top: -50px;
+    background-color: #f6f6f6;
+    
+        &__titre{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            &>.coeurvide{
+                position:absolute;
+                top:50px;
+                left: 280px;
+            }
+            &>.coeurplein{
+                position:absolute;
+                top:50px;
+                left: 280px;
+
+            }
+        }
+    }
+}
+
+h2{
+    font-family: "Shrikhand";
+    margin: 40px 30px 35px 20px;
+}
+
