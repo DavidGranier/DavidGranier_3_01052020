@@ -63,10 +63,14 @@
     margin-right: auto;
     background-color: #f6f6f6;
     
-        &__titre{
+        &__head{
             display: flex;
             flex-wrap: wrap;
             position: relative;
+            &>h2{
+                font-family: "Shrikhand";
+                margin: 40px 30px 35px 20px;
+            }
             &>.coeurvide{
                 position:absolute;
                 top:50px;
@@ -82,38 +86,105 @@
     }
 }
 
-h2{
-    font-family: "Shrikhand";
-    margin: 40px 30px 35px 20px;
-}
 
-.section-menu__contenu__entrees{
+
+.section-menu__contenu__categorie{
     margin: 15px;
-    &>h3{
-        margin: 0;
+    &__titre{
+        font-size: 0.9em;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        &__bordure{
+            height: 3px;
+            width: 40px;
+            background-color: $color3;
+        }
+    }
+    
+    &__carte{
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        max-width: 350px;
+        height: 70px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow:0 4px 8px grey;
+        padding-left: 10px;
+        margin-top: 15px;
+        &>.textecarte{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        &__titre{
+            margin: 0;
+            margin:15px 0 10px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
+            }
+        &__description{
+            margin: 0 0 10px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
+            
 
+        }
+        &__animation{
+            display: flex;
+            height: 100%;
+            &__prix{
+                margin: 40px 20px 15px 0; 
+            }
+            &__icone{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 0px;
+                border-radius: 0 20px 20px 0;
+                color: white;
+            }
+        }
     }
-    &>.bordure{
-        height: 3px;
-        width: 40px;
-        background-color: $color3;
-    }
+
     &>a{
         text-decoration: none;
-        
         color: black;
-        &:hover > div{
-            background-color: blue;/*ANNIMATION*/
+        &> div > div > span{
+            text-align: center;
         }
-        &>div{
-            max-width: 350px;
-            height: 70px;
-            border-radius: 20px;
-            background-color: white;
-            box-shadow:0 4px 8px grey; ;
+        &:hover > div > div > span{
+            background-color: $color3;/*ANNIMATION*/
+            transition: width 1s;
+            width: 60px;
+
+            &>i{
+                color: white;
+                
+                animation: check 1s ;
+                
+            }
         }
     }
 }
 
 
+@keyframes check {
+    from{ 
+        
+        transform: rotate(0);
+
+
+    }
+    to{
+        
+        transform: rotate(1turn) ;
+
+
+    }
+}
 
