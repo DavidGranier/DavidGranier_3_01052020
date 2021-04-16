@@ -26,7 +26,7 @@
 }
 @keyframes menuslide {
   from {
-    transform: translateY(200px);
+    transform: translateY(100px);
     opacity: 0;
   }
   to {
@@ -132,6 +132,11 @@ html, body {
   height: 260px;
   object-fit: cover;
 }
+@media (min-width: 1145px) {
+  .section-menu__img {
+    height: 400px;
+  }
+}
 
 /*Contenu page menu*/
 .section-menu__contenu {
@@ -217,6 +222,22 @@ html, body {
   }
 }
 
+/*Animation arrivée menu*/
+.entrees {
+  animation: menuslide 1s;
+}
+
+.plats {
+  animation: menuslide 1s 0.5s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.desserts {
+  animation: menuslide 1s 1s;
+  animation-fill-mode: both;
+}
+
 .section-menu__contenu__categorie {
   width: 330px;
   margin: 15px 15px 35px 15px;
@@ -292,6 +313,7 @@ html, body {
   text-overflow: ellipsis;
 }
 .menu__carte__prix {
+  font-weight: 700;
   width: 15%;
   display: flex;
   align-items: center;

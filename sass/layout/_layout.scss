@@ -52,6 +52,9 @@
         width: 100%;
         height: 260px;
         object-fit: cover;
+        @media (min-width: 1145px){
+            height: 400px;
+        }
         
     }
 }
@@ -121,12 +124,32 @@
     }    
 }
 
+/*Animation arrivée menu*/
+.entrees{
+    animation: menuslide 1s;
+
+} 
+
+.plats{animation: menuslide 1s 0.5s;
+    animation-fill-mode: both;
+    opacity: 0;
+
+
+} 
+
+.desserts{animation: menuslide 1s 1s;
+    animation-fill-mode: both;
+
+}
+
+
 .section-menu__contenu__categorie{
     @media (max-width: 350px){
         width: 200px;
     }
     width: 330px;
     margin: 15px 15px 35px 15px;
+    
     &__titre{
         font-size: 0.9em;
         font-weight: 400;
@@ -197,6 +220,7 @@
     }      
 
     &__prix{
+        font-weight: 700;
         width: 15%;
         display: flex;
         align-items:  center; 
