@@ -1,4 +1,39 @@
 @charset "UTF-8";
+@keyframes check {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    height: 0px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes menuslide {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*Marges*/
 html, body {
   margin: 0;
@@ -20,23 +55,6 @@ html, body {
 }
 
 /*Spinner*/
-@keyframes opacity {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    height: 0px;
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .loader {
   display: flex;
   flex-direction: column;
@@ -49,9 +67,7 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  animation-duration: 1s;
-  animation-delay: 3s;
-  animation-name: opacity;
+  animation: opacity 1s 3s;
   animation-fill-mode: both;
 }
 
@@ -116,32 +132,185 @@ html, body {
   height: 260px;
   object-fit: cover;
 }
+
+/*Contenu page menu*/
 .section-menu__contenu {
   position: relative;
-  max-width: 375px;
   border-radius: 25px 25px 0 0;
   margin-top: -50px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f6f6f6;
-}
-.section-menu__contenu__titre {
+  max-width: 375px;
+  padding-bottom: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  position: relative;
 }
-.section-menu__contenu__titre > .coeurvide {
+@media (min-width: 1145px) {
+  .section-menu__contenu {
+    flex-direction: row;
+    max-width: none;
+  }
+}
+.section-menu__contenu__head {
+  width: 100%;
+}
+.section-menu__contenu__head > h2 {
+  font-family: "Shrikhand";
+  margin: 40px 30px 35px 30px;
+}
+@media (max-width: 350px) {
+  .section-menu__contenu__head > h2 {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+.section-menu__contenu__head > .coeurvide {
   position: absolute;
   top: 50px;
   left: 280px;
 }
-.section-menu__contenu__titre > .coeurplein {
+@media (max-width: 350px) {
+  .section-menu__contenu__head > .coeurvide {
+    top: 80px;
+    left: 100px;
+  }
+}
+.section-menu__contenu__head > .coeurplein {
   position: absolute;
   top: 50px;
   left: 280px;
+}
+@media (max-width: 350px) {
+  .section-menu__contenu__head > .coeurplein {
+    top: 80px;
+    left: 100px;
+  }
+}
+.section-menu__contenu__bouton {
+  width: 190px;
+  height: 50px;
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #ff79da 100%);
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 1em;
+  box-shadow: 0 1px 8px grey;
+  margin: 25px 0 60px 0;
+}
+.section-menu__contenu__bouton:hover {
+  transition: all 1s;
+  background: #ff79da;
+  box-shadow: 0 4px 8px grey;
+  cursor: pointer;
+}
+.section-menu__contenu__bouton:focus {
+  outline: none;
+}
+@media (min-width: 1145px) {
+  .section-menu__contenu__bouton {
+    margin: 25px 0 0 100px;
+  }
 }
 
-h2 {
-  font-family: "Shrikhand";
-  margin: 40px 30px 35px 20px;
+.section-menu__contenu__categorie {
+  width: 330px;
+  margin: 15px 15px 35px 15px;
+}
+@media (max-width: 350px) {
+  .section-menu__contenu__categorie {
+    width: 200px;
+  }
+}
+.section-menu__contenu__categorie__titre {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+.section-menu__contenu__categorie__titre__bordure {
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+.section-menu__contenu__categorie > a {
+  /*cartes cliquables + animation "check" :hover*/
+  text-decoration: none;
+  color: black;
+}
+.section-menu__contenu__categorie > a:hover > div > .menu__carte__check {
+  transition: all 0.5s ease;
+  width: 60px;
+}
+.section-menu__contenu__categorie > a:hover > div > .menu__carte__check > span > i {
+  margin: auto;
+  animation: spin 0.5s;
+}
+
+.menu__carte {
+  /*agencement dans les cartes*/
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px grey;
+  padding-left: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+@media (max-width: 350px) {
+  .menu__carte {
+    width: 200px;
+  }
+}
+.menu__carte__txt {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__carte__txt__titre {
+  margin: 0;
+  margin: 15px 0 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__carte__txt__description {
+  font-size: 0.8em;
+  margin: 0 0 10px 0;
+  height: 20PX;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__carte__prix {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__carte__prix > p {
+  margin: 40px 0 10px 0;
+}
+.menu__carte__check {
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.5s ease;
+  width: 0;
+  padding: 24px 0;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Localiser*/
@@ -182,6 +351,7 @@ h2 {
   margin-bottom: 57px;
 }
 .section-un__bouton:hover {
+  transition: all 1s;
   background: #ff79da;
   box-shadow: 0 4px 8px grey;
   cursor: pointer;
@@ -190,22 +360,34 @@ h2 {
   outline: none;
 }
 
-/*Section 2 : Fonctionnement*/
+/*Section 2 : Fonctionnement (acceuil)*/
 .section-deux {
   padding: 50px 0 70px 45px;
   margin: auto;
-  max-width: 375px;
+}
+@media (min-width: 1100px) {
+  .section-deux {
+    text-align: center;
+  }
+}
+.section-deux > .flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .section-deux__titre {
   margin: 0 0 35px -15px;
 }
 .section-deux__carte {
   display: flex;
-  max-width: 322px;
+  width: 322px;
   height: 75px;
   border-radius: 25px;
   box-shadow: 0 4px 8px grey;
+  background-color: #f6f6f6;
   align-items: center;
+  margin: 20px 30px 20px -10px;
   margin-bottom: 20px;
   margin-left: -10px;
 }
@@ -231,18 +413,29 @@ h2 {
   color: #9356DC;
 }
 
-/*Section 3 : Resaurants*/
+/*Section 3 : Resaurants (acceuil)*/
 .section-trois {
   background-color: #f6f6f6;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding-bottom: 65px;
 }
 .section-trois > div {
-  max-width: 375px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .section-trois__titre {
   margin: 60px 0 30px 0;
+  padding-left: 45px;
+}
+@media (min-width: 1100px) {
+  .section-trois__titre {
+    text-align: center;
+    padding-left: 0;
+  }
 }
 .section-trois__carte {
   display: flex;
@@ -250,7 +443,7 @@ h2 {
   height: 250px;
   box-shadow: 0 4px 8px grey;
   border-radius: 25px;
-  margin-bottom: 20px;
+  margin: 20px 20px 20px 20px;
 }
 .section-trois__carte > a {
   text-decoration: none;
@@ -258,7 +451,7 @@ h2 {
   position: relative;
 }
 .section-trois__carte:hover {
-  transform: scale(1.01);
+  box-shadow: 0 0 10px 5px grey;
 }
 .section-trois__carte__img {
   width: 100%;
@@ -291,7 +484,7 @@ h2 {
 }
 .section-trois__carte__texte > p {
   margin: 5px 0 5px 0;
-  width: 250px;
+  width: 100%;
   text-decoration: none;
 }
 .section-trois__carte__texte__nom {

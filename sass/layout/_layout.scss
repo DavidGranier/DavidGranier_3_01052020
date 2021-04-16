@@ -54,35 +54,172 @@
         object-fit: cover;
         
     }
-    &__contenu{
+}
+
+/*Contenu page menu*/
+
+.section-menu__contenu{
     position: relative;
-    max-width: 375px;
-    
     border-radius: 25px 25px 0 0;
     margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f6f6f6;
+    max-width: 375px ;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     
-        &__titre{
-            display: flex;
-            flex-wrap: wrap;
-            position: relative;
-            &>.coeurvide{
-                position:absolute;
-                top:50px;
-                left: 280px;
-            }
-            &>.coeurplein{
-                position:absolute;
-                top:50px;
-                left: 280px;
+    @media (min-width: 1145px){
+        flex-direction: row;
+        max-width: none;
+    }
+    
 
+    &__head{
+        width: 100%;
+        
+        &>h2{
+            font-family: "Shrikhand";
+            margin: 40px 30px 35px 30px;
+            @media (max-width: 350px){
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+        &>.coeurvide{
+            position:absolute;
+            top:50px;
+            left: 280px;
+            @media (max-width: 350px){
+                top: 80px;
+                left: 100px;
+            }
+        }
+        &>.coeurplein{
+            position:absolute;
+            top:50px;
+            left: 280px;
+            @media (max-width: 350px){
+                top: 80px;
+                left: 100px;
+            }
+
+        }
+    }
+    &__bouton{
+        width: 190px;
+        height: 50px;
+        @include bouton;
+        margin: 25px 0 60px 0 ;
+        @media (min-width: 1145px){
+            margin: 25px 0 0 100px;
+        }
+    }    
+}
+
+.section-menu__contenu__categorie{
+    @media (max-width: 350px){
+        width: 200px;
+    }
+    width: 330px;
+    margin: 15px 15px 35px 15px;
+    &__titre{
+        font-size: 0.9em;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        &__bordure{
+            height: 3px;
+            width: 40px;
+            background-color: $color3;
+        }
+    }
+    &>a{ /*cartes cliquables + animation "check" :hover*/
+        text-decoration: none;
+        color: black;
+        
+        &:hover > div > .menu__carte__check{
+            transition: all 0.5s ease;
+            width: 60px;
+            
+             
+            
+            &>span > i{
+                margin: auto;
+                animation: spin 0.5s;
             }
         }
     }
 }
 
-h2{
-    font-family: "Shrikhand";
-    margin: 40px 30px 35px 20px;
+
+
+    
+.menu__carte{ /*agencement dans les cartes*/
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:0 4px 8px grey;
+    padding-left: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    @media (max-width: 350px){width: 200px;}
+    &__txt{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        
+        &__titre{
+            margin: 0;
+            margin:15px 0 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+                
+        }
+        &__description{
+            font-size: 0.8em;
+            margin: 0 0 10px 0;
+            height: 20PX;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }      
+
+    &__prix{
+        width: 15%;
+        display: flex;
+        align-items:  center; 
+        justify-content: center;
+        &>p{
+            margin: 40px 0 10px 0;
+        }
+    }
+
+    &__check{
+        background-color: $color3;
+        border-radius: 0 20px 20px 0;
+        transition: all 0.5s ease;
+        width: 0;
+        padding: 24px 0;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
+
+
 
