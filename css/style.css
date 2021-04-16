@@ -49,9 +49,7 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  animation-duration: 1s;
-  animation-delay: 3s;
-  animation-name: opacity;
+  animation: opacity 1s 3s;
   animation-fill-mode: both;
 }
 
@@ -158,9 +156,29 @@ html, body {
   width: 40px;
   background-color: #99E2D0;
 }
-.section-menu__contenu__categorie__carte {
+.section-menu__contenu__categorie > a {
+  text-decoration: none;
+  color: black;
+}
+.section-menu__contenu__categorie > a:hover > div > .menu__carte__check {
+  transition: all 0.5s ease;
+  width: 60px;
+}
+.section-menu__contenu__categorie > a:hover > div > .menu__carte__check > span > i {
+  margin: auto;
+  animation: spin 0.5s;
+}
+
+@keyframes check {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+.menu__carte {
   display: flex;
-  overflow: hidden;
   justify-content: space-between;
   max-width: 350px;
   height: 70px;
@@ -169,64 +187,59 @@ html, body {
   box-shadow: 0 4px 8px grey;
   padding-left: 10px;
   margin-top: 15px;
+  overflow: hidden;
 }
-.section-menu__contenu__categorie__carte > .textecarte {
+.menu__carte__txt {
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.section-menu__contenu__categorie__carte__titre {
+.menu__carte__txt__titre {
   margin: 0;
   margin: 15px 0 10px 0;
-  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.section-menu__contenu__categorie__carte__description {
+.menu__carte__txt__description {
   margin: 0 0 10px 0;
-  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.section-menu__contenu__categorie__carte__animation {
-  display: flex;
-  height: 100%;
-}
-.section-menu__contenu__categorie__carte__animation__prix {
-  margin: 40px 20px 15px 0;
-}
-.section-menu__contenu__categorie__carte__animation__icone {
+.menu__carte__prix {
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 0px;
-  border-radius: 0 20px 20px 0;
-  color: white;
 }
-.section-menu__contenu__categorie > a {
-  text-decoration: none;
-  color: black;
+.menu__carte__prix > p {
+  margin: 40px 0 10px 0;
 }
-.section-menu__contenu__categorie > a > div > div > span {
-  text-align: center;
-}
-.section-menu__contenu__categorie > a:hover > div > div > span {
+.menu__carte__check {
   background-color: #99E2D0;
-  /*ANNIMATION*/
-  transition: width 1s;
-  width: 60px;
-}
-.section-menu__contenu__categorie > a:hover > div > div > span > i {
+  border-radius: 0 20px 20px 0;
+  transition: all 0.5s ease;
+  width: 0;
+  padding: 24px 0;
+  overflow: hidden;
   color: white;
-  animation: check 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes check {
-  from {
-    transform: rotate(0);
+@keyframes menuslide {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(1turn);
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 /*Localiser*/

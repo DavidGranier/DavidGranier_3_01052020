@@ -100,73 +100,19 @@
             background-color: $color3;
         }
     }
-    
-    &__carte{
-        display: flex;
-        overflow: hidden;
-        justify-content: space-between;
-        max-width: 350px;
-        height: 70px;
-        border-radius: 20px;
-        background-color: white;
-        box-shadow:0 4px 8px grey;
-        padding-left: 10px;
-        margin-top: 15px;
-        &>.textecarte{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        &__titre{
-            margin: 0;
-            margin:15px 0 10px 0;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            
-            }
-        &__description{
-            margin: 0 0 10px 0;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            
-            
-
-        }
-        &__animation{
-            display: flex;
-            height: 100%;
-            &__prix{
-                margin: 40px 20px 15px 0; 
-            }
-            &__icone{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                width: 0px;
-                border-radius: 0 20px 20px 0;
-                color: white;
-            }
-        }
-    }
-
     &>a{
         text-decoration: none;
         color: black;
-        &> div > div > span{
-            text-align: center;
-        }
-        &:hover > div > div > span{
-            background-color: $color3;/*ANNIMATION*/
-            transition: width 1s;
+        
+        &:hover > div > .menu__carte__check{
+            transition: all 0.5s ease;
             width: 60px;
-
-            &>i{
-                color: white;
-                
-                animation: check 1s ;
-                
+            
+             
+            
+            &>span > i{
+                margin: auto;
+                animation: spin 0.5s;
             }
         }
     }
@@ -174,17 +120,82 @@
 
 
 @keyframes check {
-    from{ 
-        
-        transform: rotate(0);
-
+    from{width: 0;
 
     }
-    to{
-        
-        transform: rotate(1turn) ;
-
+    to{width: 60px;
 
     }
 }
+    
+.menu__carte{
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:0 4px 8px grey;
+    padding-left: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    &__txt{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        &__titre{
+            margin: 0;
+            margin:15px 0 10px 0;
+            overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+                
+        }
+        &__description{
+            margin: 0 0 10px 0;
+            overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+        }
+    }      
 
+    &__prix{
+        width: 15%;
+        display: flex;
+        align-items:  center; 
+        justify-content: center;
+        &>p{
+            margin: 40px 0 10px 0;
+        }
+    }
+
+    &__check{
+        background-color: $color3;
+        border-radius: 0 20px 20px 0;
+        transition: all 0.5s ease;
+        width: 0;
+        padding: 24px 0;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+@keyframes menuslide {
+    0% {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
