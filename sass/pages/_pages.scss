@@ -30,21 +30,32 @@
     }
 }
 
-/*Section 2 : Fonctionnement*/
+/*Section 2 : Fonctionnement (acceuil)*/
 .section-deux{
+    @media (min-width: 1100px){
+        text-align:center;
+    }
     padding: 50px 0 70px 45px;
     margin: auto;
-    max-width: 375px;
+
+    &>.flex{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
     &__titre{
         margin:0 0 35px -15px;
     }
     &__carte{
         display: flex;
-        max-width: 322px;
+        width: 322px;
         height: 75px;
         border-radius: 25px;
         box-shadow: 0 4px 8px grey;
+        background-color: #f6f6f6;
         align-items: center;
+        margin: 20px 30px 20px -10px;
         margin-bottom: 20px;
         margin-left: -10px;
         &__numero{
@@ -73,18 +84,28 @@
     
 }
 
-/*Section 3 : Resaurants*/
+/*Section 3 : Resaurants (acceuil)*/
 
 .section-trois{
     background-color: #f6f6f6;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-bottom: 65px;
     &>div{
-        max-width: 375px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
     }
     &__titre{
         margin:60px 0 30px 0;
+        padding-left: 45px;
+        @media (min-width: 1100px){
+            text-align:center;
+            padding-left: 0;
+        }
     }
     &__carte{
         display: flex;
@@ -92,7 +113,7 @@
         height: 250px;
         box-shadow:0 4px 8px grey;
         border-radius: 25px;
-        margin-bottom: 20px;
+        margin: 20px 20px 20px 20px;
         &>a{
             text-decoration: none;
             color: black;
@@ -130,7 +151,7 @@
             flex-wrap: wrap;
             &>p{
                 margin: 5px 0 5px 0;
-                width: 250px;
+                width: 100%;
                 text-decoration: none;
             }
             &__nom{
