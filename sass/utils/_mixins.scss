@@ -1,19 +1,39 @@
 @mixin bouton{
-    background: $color1;
+    
     background: linear-gradient(0deg,$color1 0%, $color2 100%);
-    border-radius: 25px;
     border:none;
     color: white;
     font-size: 1em;
     box-shadow: 0 1px 8px grey;
-    
-    &:hover{
-        transition: all 1s;
-        background: $color2;
-        box-shadow: 0 4px 8px grey;
-        cursor:pointer;
+    cursor: pointer;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+    &:hover {
+        transition: all 0.5s;
+        box-shadow: 0 5px 10px grey;
+        transform: scale(1.05);
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background:$color2;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 25px;
     }
     &:focus{
-        outline:none ;
+        outline: none;
     }
 }
+
