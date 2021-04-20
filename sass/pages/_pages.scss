@@ -109,7 +109,7 @@
     }
     &__carte{
         display: flex;
-        max-width: 335px;
+        width: 335px;
         height: 250px;
         box-shadow:0 4px 8px grey;
         border-radius: 25px;
@@ -118,6 +118,7 @@
             text-decoration: none;
             color: black;
             position: relative;
+            width: 100%;
         }
         &:hover{
             box-shadow: 0 0 10px 5px grey;
@@ -141,7 +142,7 @@
             border-radius: 5px;
             font-weight: 700;
             background-color: $color3;
-            color: #008766; /*Ajouter un DARKEN*/
+            color: darken($color3, 40);
         }
         &__texte{
             position: relative;
