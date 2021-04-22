@@ -8,8 +8,6 @@
     }
 }
 /*Spinner*/
-
-
 .loader{
     display: flex;
     flex-direction: column;
@@ -24,13 +22,14 @@
     z-index: 9999;
     animation: opacity 1s 3s ;
     animation-fill-mode: both;
-}
-.spinner{
-    color: $color1;
-    animation:spin 2s linear infinite;
-}
-.spinner__logo{
-    margin-bottom: 40px;
+    &__logo{
+        margin-bottom: 40px;
+    }
+    &__spinner{
+        color: $color1;
+        animation:spin 2s linear infinite;
+    }
+
 }
 
   
