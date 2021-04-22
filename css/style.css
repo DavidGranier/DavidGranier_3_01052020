@@ -71,14 +71,12 @@ html, body {
   animation: opacity 1s 3s;
   animation-fill-mode: both;
 }
-
-.spinner {
+.loader__logo {
+  margin-bottom: 40px;
+}
+.loader__spinner {
   color: #9356DC;
   animation: spin 2s linear infinite;
-}
-
-.spinner__logo {
-  margin-bottom: 40px;
 }
 
 /*Header*/
@@ -110,6 +108,11 @@ html, body {
 .footer > div {
   display: flex;
   flex-wrap: wrap;
+}
+@media (min-width: 1145px) {
+  .footer > div {
+    justify-content: space-around;
+  }
 }
 .footer__logo {
   width: 100px;
@@ -277,6 +280,7 @@ html, body {
   animation-fill-mode: both;
 }
 
+/*Categorie de produits*/
 .section-menu__contenu__categorie {
   width: 330px;
   margin: 15px 15px 35px 15px;
@@ -297,7 +301,7 @@ html, body {
   background-color: #99E2D0;
 }
 .section-menu__contenu__categorie > a {
-  /*cartes cliquables + animation "check" :hover*/
+  /*Produits cliquables + animation "check" :hover*/
   text-decoration: none;
   color: black;
 }
@@ -311,7 +315,7 @@ html, body {
 }
 
 .menu__carte {
-  /*agencement dans les cartes*/
+  /*agencement des cartes produit*/
   display: flex;
   justify-content: space-between;
   max-width: 350px;

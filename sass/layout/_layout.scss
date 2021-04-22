@@ -27,6 +27,9 @@
     &>div{
         display: flex;
         flex-wrap: wrap;
+        @media (min-width:1145px){
+        justify-content: space-around;
+        }
     }
     &__logo{
         width: 100px;
@@ -157,7 +160,7 @@
 
 }
 
-
+/*Categorie de produits*/
 .section-menu__contenu__categorie{
     @media (max-width: 350px){
         width: 200px;
@@ -175,7 +178,7 @@
             background-color: $color3;
         }
     }
-    &>a{ /*cartes cliquables + animation "check" :hover*/
+    &>a{ /*Produits cliquables + animation "check" :hover*/
         text-decoration: none;
         color: black;
         
@@ -196,7 +199,7 @@
 
 
     
-.menu__carte{ /*agencement dans les cartes*/
+.menu__carte{ /*agencement des cartes produit*/
     display: flex;
     justify-content: space-between;
     max-width: 350px;
