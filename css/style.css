@@ -300,16 +300,17 @@ html, body {
   width: 40px;
   background-color: #99E2D0;
 }
-.section-menu__contenu__categorie > a {
+.section-menu__contenu__categorie > .menu__carte {
   /*Produits cliquables + animation "check" :hover*/
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
-.section-menu__contenu__categorie > a:hover > div > .menu__carte__check {
+.section-menu__contenu__categorie > .menu__carte:hover > .menu__carte__check {
   transition: all 0.5s ease;
   width: 60px;
 }
-.section-menu__contenu__categorie > a:hover > div > .menu__carte__check > span > i {
+.section-menu__contenu__categorie > .menu__carte:hover > .menu__carte__check > span > i {
   margin: auto;
   animation: spin 0.5s;
 }

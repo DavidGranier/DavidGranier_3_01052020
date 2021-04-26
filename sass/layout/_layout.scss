@@ -178,11 +178,12 @@
             background-color: $color3;
         }
     }
-    &>a{ /*Produits cliquables + animation "check" :hover*/
+    &>.menu__carte{ /*Produits cliquables + animation "check" :hover*/
         text-decoration: none;
         color: black;
+        cursor: pointer;
         
-        &:hover > div > .menu__carte__check{
+        &:hover > .menu__carte__check{
             transition: all 0.5s ease;
             width: 60px;
             
